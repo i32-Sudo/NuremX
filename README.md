@@ -1,6 +1,6 @@
 # NuremX
 NuremX is a cheat for Apex Legends that uses Nurel AI Training and Model Detection
-![alt text](https://raw.githubusercontent.com/Zurek0x/NuremX/main/media/header.jpg)
+![alt text](https://github.com/Zurek0x/NuremX/blob/main/media/header.jpg)
 
 # Public-Test
 NuremX is a public test cheat, It is not fully working and will still be constantly updated, As the game updates and so does the script there is still a lot of issues to be fixed, You can use the cheat but you will have to edit the config a bit to match your settings or mess with the code.
