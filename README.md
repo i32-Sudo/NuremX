@@ -1,4 +1,4 @@
-# NuremX
+# NuremX - Apex Legends
 NuremX is a cheat for Apex Legends that uses Nurel AI Training and Model Detection, We have spent over 4000 Screenshots and 200 Text Definitions to train a AI to detect enimies with
 customizable configurations and code, We professionally trained a AI to detect enimies and it works flawless.
 ![alt text](https://github.com/Zurek0x/NuremX/blob/main/media/header.jpg)
