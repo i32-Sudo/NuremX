@@ -47,7 +47,8 @@ Leatest Version of PIP
 ![alt text](https://github.com/Zurek0x/NuremX/blob/main/media/Screenshot_8.png)
 ![alt text](https://github.com/Zurek0x/NuremX/blob/main/media/Screenshot_9.png)
 
+
 # Credits
-> Zurek0x (Developing & Testing)
-> tyl (Developing & Testing)
-> KurkMF (Development Process & Testing)
+> * Zurek0x (Developing & Testing)
+> * tyl (Developing & Testing)
+> * KurkMF (Development Process & Testing)
