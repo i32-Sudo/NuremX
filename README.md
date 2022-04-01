@@ -9,3 +9,23 @@ NuremX Uses YOLOv5 AI Training and AI Datasets, We have trained a professional A
 
 # Public Source
 Our code is public source and free to use/edit (But do not sell, We have a liense) You may edit our code (Under A Fork of the project, By obligaitons of our license you may not distribute non-approved / tampered code unless it has been approved as a FORK of our project)
+
+# Usage
+```
+[Requirements]
+Nvidia SDK
+Torch SDK for Cuda 10+
+Python 3.8+
+Leatest Version of PIP
+
+1. install required modules
+(pip install -r requirements.txt)
+2. Run script using command
+(python3 NuremX.py) or (python NuremX.py)
+3. Dun
+```
+
+# Change-Log
+> Version 1.0
+> * Added source to github.com
+> * Published code to public
