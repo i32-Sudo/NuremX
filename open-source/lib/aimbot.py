@@ -61,8 +61,7 @@ class Aimbot:
     aimbot_status = colored("ENABLED", 'green')
 
     def __init__(self, box_constant = 553, collect_data = False, mouse_delay = 0.0001, debug = False):
-        #controls the initial centered box width and height of the "Lunar Vision" window
-        self.box_constant = box_constant #controls the size of the detection box (equaling the width and height)
+        self.box_constant = box_constant
 
         print("[INFO] Loading the neural network model")
         self.model = torch.hub.load('ultralytics/yolov5', 'custom', path='lib/best.pt', force_reload = True)
@@ -219,4 +218,4 @@ class Aimbot:
         Aimbot.screen.close()
         os._exit(0)
 
-if __name__ == "__main__": print("You are in the wrong directory and are running the wrong file; you must run lunar.py")
+if __name__ == "__main__": print("You are in the wrong directory and are running the wrong file; you must run NuremX.py")
