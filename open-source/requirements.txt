@@ -23,5 +23,3 @@ wheel
 termcolor
 keyboard
 Pillow
-win10toast
-configparser
