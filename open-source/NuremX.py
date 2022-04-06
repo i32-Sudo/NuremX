@@ -19,8 +19,8 @@ def create_config():
     config.add_section("settings")
     config.set("settings", "welcome_notif", "0")
     config.set("settings", "size_of_window", "466")
-    config.set("settings", "confidence_threshold", "1")
-    config.set("settings", "NMS_IoU", "1")
+    config.set("settings", "confidence_threshold", "0.1")
+    config.set("settings", "NMS_IoU", "0.1")
     with open("configuration_settings.ini", 'w') as configfile:
         config.write(configfile)
 

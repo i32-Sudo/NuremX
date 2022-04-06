@@ -60,6 +60,9 @@ Leatest Version of PIP
 ```
 
 # Change-Log
+> Version 1.4.6
+> * Fixed Configuration Error with "confidence_threshold" and "nms_iou"
+> * Added EAC_Bypass development process and spoofing of program
 > Version 1.4.2
 > * Added NMS_IoU Configuration in config file
 > * Added confidence_threshold in config file
