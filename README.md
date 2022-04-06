@@ -81,6 +81,7 @@ Leatest Version of PIP
 > * Published code to public
 
 # Screenshots
+Screenshots taken on Version 1.0
 ![alt text](https://github.com/Zurek0x/NuremX/blob/main/media/Screenshot_7.png)
 ![alt text](https://github.com/Zurek0x/NuremX/blob/main/media/Screenshot_8.png)
 ![alt text](https://github.com/Zurek0x/NuremX/blob/main/media/Screenshot_9.png)
