@@ -38,6 +38,11 @@ welcome_notif = int(welcome_notif_str)
 size_of_window_str = config['settings']['size_of_window']
 size_of_window = int(size_of_window_str)
 
+confidence_threshold = config.getfloat('settings', 'confidence_threshold')
+confidence_threshold_str = str(confidence_threshold)
+NMS_IoU = config.getfloat('settings', 'nms_iou')
+NMS_IoU_str = str(NMS_IoU)
+
 def on_release(key):
     try:
         if key == keyboard.Key.f7:
@@ -92,6 +97,10 @@ if __name__ == "__main__":
     + Highly Undetected
                            
     ''', "red"))
+    print("    Confidence Threshold; " + confidence_threshold_str)
+    print("    NMS_IoU; " + NMS_IoU_str)
+    print("")
+    
 
     path_exists = os.path.exists("lib/config/config.json")
     if not path_exists or ("setup" in sys.argv):

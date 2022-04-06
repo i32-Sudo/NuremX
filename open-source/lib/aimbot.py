@@ -23,11 +23,9 @@ config.read('configuration_settings.ini')
 size_of_window_str = config['settings']['size_of_window']
 size_of_window = int(size_of_window_str)
 
-confidence_threshold_str = config['settings']['confidence_threshold']
-confidence_threshold = int(confidence_threshold_str)
+confidence_threshold = config.getfloat('settings', 'confidence_threshold')
 
-NMS_IoU_str = config['settings']['NMS_IoU']
-NMS_IoU = int(NMS_IoU_str)
+NMS_IoU = config.getfloat('settings', 'nms_iou')
 
 PUL = ctypes.POINTER(ctypes.c_ulong)
 class KeyBdInput(ctypes.Structure):
