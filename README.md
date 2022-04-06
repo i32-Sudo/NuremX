@@ -40,10 +40,12 @@ Leatest Version of PIP
 # Change-Log
 > Version 1.3.9
 > * Seperated AI Version into seperate folders
+> 
 > Version 1.3.6
 > * Added a better trained AI
 > * Fixed code bugs and errors
 > * Added better optimization
+> 
 > Version 1.0
 > * Added source to github.com
 > * Published code to public
