@@ -60,10 +60,10 @@ class Aimbot:
         sens_config = json.load(f)
     aimbot_status = colored("ENABLED", 'green')
 
-    def __init__(self, box_constant = 553, collect_data = False, mouse_delay = 0.0001, debug = False):
+    def __init__(self, box_constant = 553, collect_data = False, mouse_delay = 0, debug = False): # original mouse delay == 0.0001
         self.box_constant = box_constant
 
-        print("[INFO] Loading the neural network model")
+        # print("[INFO] Loading the neural network model")
         self.model = torch.hub.load('ultralytics/yolov5', 'custom', path='lib/best.pt', force_reload = True)
         if torch.cuda.is_available():
             print(colored("CUDA ACCELERATION [ENABLED]", "green"))
@@ -71,8 +71,8 @@ class Aimbot:
             print(colored("[!] CUDA ACCELERATION IS UNAVAILABLE", "red"))
             print(colored("[!] Check your PyTorch installation, else performance will be poor", "red"))
 
-        self.model.conf = 0.14 # base confidence threshold (or base detection (0-1) original is 0.45
-        self.model.iou = 0.14 # NMS IoU (0-1) Original is 0.45
+        self.model.conf = 0.1 # base confidence threshold (or base detection (0-1) original is 0.45
+        self.model.iou = 0.1 # NMS IoU (0-1) Original is 0.45
         self.collect_data = collect_data
         self.mouse_delay = mouse_delay
         self.debug = debug
