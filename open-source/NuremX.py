@@ -18,6 +18,9 @@ config = configparser.ConfigParser()
 def create_config():
     config.add_section("settings")
     config.set("settings", "welcome_notif", "0")
+    config.set("settings", "size_of_window", "466")
+    config.set("settings", "confidence_threshold", "1")
+    config.set("settings", "NMS_IoU", "1")
     with open("configuration_settings.ini", 'w') as configfile:
         config.write(configfile)
 
@@ -31,6 +34,10 @@ finally:
 config.read('configuration_settings.ini')
 welcome_notif_str = config['settings']['welcome_notif']
 welcome_notif = int(welcome_notif_str)
+
+size_of_window_str = config['settings']['size_of_window']
+size_of_window = int(size_of_window_str)
+
 def on_release(key):
     try:
         if key == keyboard.Key.f1:

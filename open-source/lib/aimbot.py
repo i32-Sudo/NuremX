@@ -12,10 +12,22 @@ import uuid
 import win32api
 import string
 import random
+import configparser
 from termcolor import colored
 
 title_gen = string.ascii_letters
 title_str = ''.join(random.choice(title_gen) for i in range(10))
+
+config = configparser.ConfigParser()
+config.read('configuration_settings.ini')
+size_of_window_str = config['settings']['size_of_window']
+size_of_window = int(size_of_window_str)
+
+confidence_threshold_str = config['settings']['confidence_threshold']
+confidence_threshold = int(confidence_threshold_str)
+
+NMS_IoU_str = config['settings']['NMS_IoU']
+NMS_IoU = int(NMS_IoU_str)
 
 PUL = ctypes.POINTER(ctypes.c_ulong)
 class KeyBdInput(ctypes.Structure):
@@ -60,7 +72,7 @@ class Aimbot:
         sens_config = json.load(f)
     aimbot_status = colored("ENABLED", 'green')
 
-    def __init__(self, box_constant = 553, collect_data = False, mouse_delay = 0, debug = False): # original mouse delay == 0.0001
+    def __init__(self, box_constant = size_of_window, collect_data = False, mouse_delay = 0.0001, debug = False): # original mouse delay == 0.0001
         self.box_constant = box_constant
 
         # print("[INFO] Loading the neural network model")
@@ -71,8 +83,8 @@ class Aimbot:
             print(colored("[!] CUDA ACCELERATION IS UNAVAILABLE", "red"))
             print(colored("[!] Check your PyTorch installation, else performance will be poor", "red"))
 
-        self.model.conf = 0.1 # base confidence threshold (or base detection (0-1) original is 0.45
-        self.model.iou = 0.1 # NMS IoU (0-1) Original is 0.45
+        self.model.conf = confidence_threshold # base confidence threshold (or base detection (0-1) original is 0.45
+        self.model.iou = NMS_IoU # NMS IoU (0-1) Original is 0.45
         self.collect_data = collect_data
         self.mouse_delay = mouse_delay
         self.debug = debug

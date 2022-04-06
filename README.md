@@ -60,6 +60,9 @@ Leatest Version of PIP
 ```
 
 # Change-Log
+> Version 1.4.2
+> * Added NMS_IoU Configuration in config file
+> * Added confidence_threshold in config file
 > Version 1.3.9
 > * Seperated AI Version into seperate folders
 > 
