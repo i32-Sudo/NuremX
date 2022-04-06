@@ -70,7 +70,7 @@ class Aimbot:
     pixel_increment = 1 #controls how many pixels the mouse moves for each relative movement
     with open("lib/config/config.json") as f:
         sens_config = json.load(f)
-    aimbot_status = colored("ENABLED", 'green')
+    aimbot_status = colored("Enabled", 'green')
 
     def __init__(self, box_constant = size_of_window, collect_data = False, mouse_delay = 0.0001, debug = False): # original mouse delay == 0.0001
         self.box_constant = box_constant
@@ -78,7 +78,7 @@ class Aimbot:
         # print("[INFO] Loading the neural network model")
         self.model = torch.hub.load('ultralytics/yolov5', 'custom', path='lib/best.pt', force_reload = True)
         if torch.cuda.is_available():
-            print(colored("CUDA ACCELERATION [ENABLED]", "green"))
+            print(colored("\nGPU Utilization [Supported]", "green"))
         else:
             print(colored("[!] CUDA ACCELERATION IS UNAVAILABLE", "red"))
             print(colored("[!] Check your PyTorch installation, else performance will be poor", "red"))
@@ -89,15 +89,15 @@ class Aimbot:
         self.mouse_delay = mouse_delay
         self.debug = debug
 
-        print("\n[INFO] PRESS 'F1' TO TOGGLE AIMBOT\n[INFO] PRESS 'F2' TO QUIT")
+        print("[F7] Toggle Aim Assist\n[F8] Force Close Script")
 
     def update_status_aimbot():
-        if Aimbot.aimbot_status == colored("ENABLED", 'green'):
-            Aimbot.aimbot_status = colored("DISABLED", 'red')
+        if Aimbot.aimbot_status == colored("Enabled", 'green'):
+            Aimbot.aimbot_status = colored("Disabled", 'red')
         else:
-            Aimbot.aimbot_status = colored("ENABLED", 'green')
+            Aimbot.aimbot_status = colored("Enabled", 'green')
         sys.stdout.write("\033[K")
-        print(f"[!] AIMBOT IS [{Aimbot.aimbot_status}]", end = "\r")
+        print(f"Aimbot Status; [{Aimbot.aimbot_status}]", end = "\r")
 
     def left_click():
         ctypes.windll.user32.mouse_event(0x0002) #left mouse down
@@ -112,7 +112,7 @@ class Aimbot:
             now = get_now()
 
     def is_aimbot_enabled():
-        return True if Aimbot.aimbot_status == colored("ENABLED", 'green') else False
+        return True if Aimbot.aimbot_status == colored("Enabled", 'green') else False
 
     def is_targeted():
         return True if win32api.GetKeyState(0x02) in (-127, -128) else False
@@ -156,7 +156,6 @@ class Aimbot:
             
 
     def start(self):
-        print("[INFO] Beginning screen capture")
         Aimbot.update_status_aimbot()
         half_screen_width = ctypes.windll.user32.GetSystemMetrics(0)/2 #this should always be 960
         half_screen_height = ctypes.windll.user32.GetSystemMetrics(1)/2 #this should always be 540
@@ -226,7 +225,6 @@ class Aimbot:
                 break
 
     def clean_up():
-        print("\n[INFO] F2 WAS PRESSED. QUITTING...")
         Aimbot.screen.close()
         os._exit(0)
 

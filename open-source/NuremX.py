@@ -17,7 +17,7 @@ config = configparser.ConfigParser()
 
 def create_config():
     config.add_section("settings")
-    config.set("settings", "welcome_notif", "0")
+    config.set("settings", "welcome_notif", "1")
     config.set("settings", "size_of_window", "466")
     config.set("settings", "confidence_threshold", "1")
     config.set("settings", "NMS_IoU", "1")
@@ -40,9 +40,9 @@ size_of_window = int(size_of_window_str)
 
 def on_release(key):
     try:
-        if key == keyboard.Key.f1:
+        if key == keyboard.Key.f7:
             Aimbot.update_status_aimbot()
-        if key == keyboard.Key.f2:
+        if key == keyboard.Key.f8:
             Aimbot.clean_up()
     except NameError:
         pass
