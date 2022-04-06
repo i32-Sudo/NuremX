@@ -21,6 +21,7 @@ def create_config():
     config.set("settings", "size_of_window", "466")
     config.set("settings", "confidence_threshold", "1")
     config.set("settings", "NMS_IoU", "1")
+    config.set("settings", "mouse_delay", "0.0001")
     with open("configuration_settings.ini", 'w') as configfile:
         config.write(configfile)
 
@@ -42,6 +43,9 @@ confidence_threshold = config.getfloat('settings', 'confidence_threshold')
 confidence_threshold_str = str(confidence_threshold)
 NMS_IoU = config.getfloat('settings', 'nms_iou')
 NMS_IoU_str = str(NMS_IoU)
+
+get_mouse_delay = config.getfloat('settings', 'mouse_delay')
+get_mouse_delay_str = str(get_mouse_delay)
 
 def on_release(key):
     try:
@@ -98,7 +102,8 @@ if __name__ == "__main__":
                            
     ''', "red"))
     print("    Confidence Threshold; " + confidence_threshold_str)
-    print("    NMS_IoU; " + NMS_IoU_str)
+    print("    NMS IoU; " + NMS_IoU_str)
+    print("    Mouse Delay; " + get_mouse_delay_str + "ms")
     print("")
     
 

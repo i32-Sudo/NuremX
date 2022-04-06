@@ -24,8 +24,8 @@ size_of_window_str = config['settings']['size_of_window']
 size_of_window = int(size_of_window_str)
 
 confidence_threshold = config.getfloat('settings', 'confidence_threshold')
-
 NMS_IoU = config.getfloat('settings', 'nms_iou')
+get_mouse_delay = config.getfloat('settings', 'mouse_delay')
 
 PUL = ctypes.POINTER(ctypes.c_ulong)
 class KeyBdInput(ctypes.Structure):
@@ -70,7 +70,7 @@ class Aimbot:
         sens_config = json.load(f)
     aimbot_status = colored("Enabled", 'green')
 
-    def __init__(self, box_constant = size_of_window, collect_data = False, mouse_delay = 0.0001, debug = False): # original mouse delay == 0.0001
+    def __init__(self, box_constant = size_of_window, collect_data = False, mouse_delay = get_mouse_delay, debug = False): # original mouse delay == 0.0001
         self.box_constant = box_constant
 
         # print("[INFO] Loading the neural network model")
