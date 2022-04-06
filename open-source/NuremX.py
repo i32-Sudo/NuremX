@@ -40,9 +40,9 @@ size_of_window = int(size_of_window_str)
 
 def on_release(key):
     try:
-        if key == keyboard.Key.f1:
+        if key == keyboard.Key.f7:
             Aimbot.update_status_aimbot()
-        if key == keyboard.Key.f2:
+        if key == keyboard.Key.f8:
             Aimbot.clean_up()
     except NameError:
         pass
@@ -57,7 +57,7 @@ def setup():
     if not os.path.exists(path):
         os.makedirs(path)
 
-    print("[INFO] In-game X and Y axis sensitivity should be the same")
+    print("[$] In-game X and Y axis sensitivity should be the same")
     def prompt(str):
         valid_input = False
         while not valid_input:
@@ -68,9 +68,8 @@ def setup():
                 print("[!] Invalid Input. Make sure to enter only the number (e.g. 6.9)")
         return number
 
-    xy_sens = prompt("Enter Sensitivity ; ")
-    targeting_sens = prompt("Enter Scope Sensitivity ; ")
-
+    xy_sens = prompt("[>] Enter Sensitivity ; ")
+    targeting_sens = prompt("[>] Enter Scope Sensitivity ; ")
     sensitivity_settings = {"xy_sens": xy_sens, "targeting_sens": targeting_sens, "xy_scale": 10/xy_sens, "targeting_scale": 1000/(targeting_sens * xy_sens)}
 
     with open('lib/config/config.json', 'w') as outfile:
@@ -85,14 +84,14 @@ if __name__ == "__main__":
     os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = '1'
 
     print(colored('''
-    Karambit2 - Fortnite Cheat
+    NuremX - Apex Legends Cheat
 
     + High Peformance Cheat
     + Highly Undetected
     + AI/Nurel Network Aim Assist
-    + Customizable
+    + Highly Customizable
                            
-    ''', "green"))
+    ''', "red"))
 
     path_exists = os.path.exists("lib/config/config.json")
     if not path_exists or ("setup" in sys.argv):
@@ -104,7 +103,7 @@ if __name__ == "__main__":
         os.makedirs("lib/data")
     from lib.aimbot import Aimbot
     if welcome_notif == 1:
-        toaster.show_toast("Karambit2","Thank you for using Karambit2 by Zurek0x                          (This notification will go away in 5 Seconds)")
+        toaster.show_toast("NuremX","Thank you for using NuremX by Zurek0x                          (This notification will go away in 5 Seconds)")
     elif welcome_notif == 0:
         pass
     else:
