@@ -46,6 +46,9 @@ Leatest Version of PIP
 ```
 
 # Change-Log
+> Version 1.5.9
+> * Added Update_Check Function to check for updates (Does Not Auto Update)
+> 
 > Version 1.5.8
 > * Updated Dataset to a more optimized dataset with more AI Training
 > * Updated Dataset loading to be more optimized
