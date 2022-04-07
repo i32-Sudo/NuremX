@@ -11,8 +11,9 @@ NuremX is a public test cheat, It is not fully working and will still be constan
 # Update_Check Function
 The program will auto check for updates from the github repo' using URLLIB3, Upon a version change the **ver.txt** file & **current_ver** (str) in the script will be changed, If the versions do not match in any-case scenario the program will forcefully become un-usable until a update to the program comes, You must re-clone the repo' and **pip install -r requirements.txt** for the leatest requirements, This option is unable to be turned off and you must update to keep up with newer optimizations or newer content.
 
-# Nurel Network & AI Training
-NuremX Uses YOLOv5 AI Training and AI Datasets, We have trained a professional AI to recognize enimies and entities and soon items and or objects, This is a advanced cheat, There is no Memory Hooking or Hex Editing or even Process Hooking, Everything comes straight from your display and it will recognize the enimies and automatically aim at them and display there position.
+# What Is Nurel Network & AI Training?
+NuremX Uses YOLOv5 AI Training and AI Datasets, We have trained a professional AI to recognize enimies and entities and soon items and or objects, This is a advanced cheat, There is no Memory Hooking or Hex Editing or even Process Hooking, Everything comes straight from your display and it will recognize the enimies and automatically aim at them and display there position. We hope to build onto this a lot more and find that Process Hooking and Memory Hooking/Editing is a long process especially when you have a Anti-Cheat in the way of your path to making a sucsessful cheat program or script.
+We don't want people to take this as it "is" a cheat or Aim-Assist but something you can learn off of, We think that AI Training and Nurel Networks are great and a good way to train AI to do human tasks, We are starting to see in 2022+ that AI is becoming more powerful and as computers become more powerful we can output almost the same power as a human brain.
 
 # Notice About Performance
 This script uses A LOT of RAM/CPU/GPU Power, You must have at least 3 GB of DDR3 Ram dedicated to the script, Note that also anything lower peformance then a GTX 1080 TI will have delayed peformance and have a lower Frame Count You also want at least a 3Ghz (or more) CPU with more then 3 Cores Minimum. 
