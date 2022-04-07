@@ -8,6 +8,9 @@ NuremX is a public test cheat, It is not fully working and will still be constan
 
 ![alt text](https://github.com/Zurek0x/NuremX/blob/main/media/Screenshot_6.png)
 
+# Update_Check Function
+The program will auto check for updates from the github repo' using URLLIB3, Upon a version change the **ver.txt** file & **current_ver** (str) in the script will be changed, If the versions do not match in any-case scenario the program will forcefully become un-usable until a update to the program comes, You must re-clone the repo' and **pip install -r requirements.txt** for the leatest requirements, This option is unable to be turned off and you must update to keep up with newer optimizations or newer content.
+
 # Nurel Network & AI Training
 NuremX Uses YOLOv5 AI Training and AI Datasets, We have trained a professional AI to recognize enimies and entities and soon items and or objects, This is a advanced cheat, There is no Memory Hooking or Hex Editing or even Process Hooking, Everything comes straight from your display and it will recognize the enimies and automatically aim at them and display there position.
 
@@ -46,6 +49,9 @@ Leatest Version of PIP
 ```
 
 # Change-Log
+> Version 1.5.9
+> * Added Update_Check Function to check for updates (Does Not Auto Update)
+> 
 > Version 1.5.8
 > * Updated Dataset to a more optimized dataset with more AI Training
 > * Updated Dataset loading to be more optimized
