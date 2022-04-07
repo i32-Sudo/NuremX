@@ -7,6 +7,8 @@ import random
 import string
 import ctypes
 import configparser
+import urllib
+import urllib.request
 
 from win10toast import ToastNotifier
 from pynput import keyboard
@@ -14,6 +16,27 @@ from termcolor import colored
 
 toaster = ToastNotifier()
 config = configparser.ConfigParser()
+
+current_ver = str('1.5.9')
+leatest_version_check = str('[NM-NotSet] NOT_SET-NO_CHECK-AUTH?>/?')
+
+def update_check():
+    global decoded_line
+    global current_ver
+    url_server = 'https://raw.githubusercontent.com/Zurek0x/NuremX/main/ver.txt'
+    file = urllib.request.urlopen(url_server)
+    for line in file:
+        decoded_line = line.decode("utf-8")
+        if current_ver == decoded_line:
+            leatest_version_check = str('[Leatest]')
+        else:
+            print("[!] New Version Released!")
+            print("[!] Please Update To ; " + decoded_line)
+            print("[$] " + current_ver + " >> " + decoded_line)
+            print("[ Download Page ]")
+            print("[  > https://github.com/Zurek0x/NuremX < ]")
+            while True:
+                input()
 
 def create_config():
     config.add_section("settings")
@@ -97,14 +120,14 @@ if __name__ == "__main__":
     ctypes.windll.kernel32.SetConsoleTitleA(title_str)
     os.system('cls' if os.name == 'nt' else 'clear')
     os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = '1'
+    update_check()
 
     print(colored('''
-    NuremX - Apex Cheat
+    NuremX - Apex Legends
 
-    + High Peformance Cheat
-    + Highly Undetected
-                           
-    ''', "red"))
+    + High Peformance
+    + Highly Undetected                ''', "red"))
+    print(colored("    Current Version; " + current_ver + "\n", "yellow"))
     print("    Confidence Threshold; " + confidence_threshold_str)
     print("    NMS IoU; " + NMS_IoU_str)
     print("    Mouse Delay; " + get_mouse_delay_str + "ms")

@@ -25,3 +25,4 @@ keyboard
 Pillow
 win10toast
 configparser
+urllib3
