@@ -17,7 +17,7 @@ from termcolor import colored
 toaster = ToastNotifier()
 config = configparser.ConfigParser()
 
-current_ver = str('1.6.1')
+current_ver = str('1.6.2')
 leatest_version_check = str('[NM-NotSet] NOT_SET-NO_CHECK-AUTH?>/?')
 
 def update_check():
@@ -28,7 +28,8 @@ def update_check():
     for line in file:
         decoded_line = line.decode("utf-8")
         if current_ver == decoded_line:
-            leatest_version_check = str('[Leatest]')
+            pass
+            #leatest_version_check = str('[Leatest]')
         else:
             print("[!] New Version Released!")
             print("[!] Please Update To ; " + decoded_line)
@@ -121,7 +122,6 @@ if __name__ == "__main__":
     os.system('cls' if os.name == 'nt' else 'clear')
     os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = '1'
     update_check()
-
     print(colored('''
     NuremX - Apex Legends
 
