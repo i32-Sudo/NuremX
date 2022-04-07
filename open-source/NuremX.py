@@ -29,14 +29,14 @@ def update_check():
         decoded_line = line.decode("utf-8")
         if decoded_line != current_ver:
             leatest_version_check = str('[Leatest]')
-        #else:
-        #    print("[!] New Version Released!")
-        #    print("[!] Please Update To ; " + decoded_line)
-        #    print("[$] " + current_ver + " >> " + decoded_line)
-        #    print("[ Download Page ]")
-        #    print("[  > https://github.com/Zurek0x/NuremX < ]")
-        #    while True:
-        #        input()
+        else:
+            print("[!] New Version Released!")
+            print("[!] Please Update To ; " + decoded_line)
+            print("[$] " + current_ver + " >> " + decoded_line)
+            print("[ Download Page ]")
+            print("[  > https://github.com/Zurek0x/NuremX < ]")
+            while True:
+                input()
 
 def create_config():
     config.add_section("settings")
