@@ -27,17 +27,16 @@ def update_check():
     file = urllib.request.urlopen(url_server)
     for line in file:
         decoded_line = line.decode("utf-8")
-        if current_ver == decoded_line:
-            pass
-            #leatest_version_check = str('[Leatest]')
-        else:
-            print("[!] New Version Released!")
-            print("[!] Please Update To ; " + decoded_line)
-            print("[$] " + current_ver + " >> " + decoded_line)
-            print("[ Download Page ]")
-            print("[  > https://github.com/Zurek0x/NuremX < ]")
-            while True:
-                input()
+        if decoded_line != current_ver:
+            leatest_version_check = str('[Leatest]')
+        #else:
+        #    print("[!] New Version Released!")
+        #    print("[!] Please Update To ; " + decoded_line)
+        #    print("[$] " + current_ver + " >> " + decoded_line)
+        #    print("[ Download Page ]")
+        #    print("[  > https://github.com/Zurek0x/NuremX < ]")
+        #    while True:
+        #        input()
 
 def create_config():
     config.add_section("settings")
@@ -124,7 +123,6 @@ if __name__ == "__main__":
     update_check()
     print(colored('''
     NuremX - Apex Legends
-
     + High Peformance
     + Highly Undetected                ''', "red"))
     print(colored("    Current Version; " + current_ver + "\n", "yellow"))
@@ -133,8 +131,6 @@ if __name__ == "__main__":
     print("    Mouse Delay; " + get_mouse_delay_str + "ms")
     print("    Pixel Increse; " + get_pixel_increse_str + "px")
     print("")
-    
-
     path_exists = os.path.exists("lib/config/config.json")
     if not path_exists or ("setup" in sys.argv):
         if not path_exists:
