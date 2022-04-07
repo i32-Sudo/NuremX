@@ -14,6 +14,9 @@ The program will auto check for updates from the github repo' using URLLIB3, Upo
 # Nurel Network & AI Training
 NuremX Uses YOLOv5 AI Training and AI Datasets, We have trained a professional AI to recognize enimies and entities and soon items and or objects, This is a advanced cheat, There is no Memory Hooking or Hex Editing or even Process Hooking, Everything comes straight from your display and it will recognize the enimies and automatically aim at them and display there position.
 
+# Notice About Performance
+This script uses A LOT of RAM/CPU/GPU Power, You must have at least 3 GB of DDR3 Ram dedicated to the script, Note that also anything lower peformance then a GTX 1080 TI will have delayed peformance and have a lower Frame Count You also want at least a 3Ghz (or more) CPU with more then 3 Cores Minimum. 
+
 # Cheat Features
 > Script Features
 > * UUID Spoofing (Spoofs Title Window & Command Window)
