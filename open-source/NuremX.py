@@ -17,7 +17,7 @@ from termcolor import colored
 toaster = ToastNotifier()
 config = configparser.ConfigParser()
 
-current_ver = str('1.5.9')
+current_ver = str('1.6.1')
 leatest_version_check = str('[NM-NotSet] NOT_SET-NO_CHECK-AUTH?>/?')
 
 def update_check():
