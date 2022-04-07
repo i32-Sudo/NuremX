@@ -27,6 +27,9 @@ confidence_threshold = config.getfloat('settings', 'confidence_threshold')
 NMS_IoU = config.getfloat('settings', 'nms_iou')
 get_mouse_delay = config.getfloat('settings', 'mouse_delay')
 
+get_pixel_increse = config.getfloat('settings', 'pixel_increse')
+get_pixel_increse_str = str(get_pixel_increse)
+
 PUL = ctypes.POINTER(ctypes.c_ulong)
 class KeyBdInput(ctypes.Structure):
     _fields_ = [("wVk", ctypes.c_ushort),
@@ -65,7 +68,7 @@ class Aimbot:
     extra = ctypes.c_ulong(0)
     ii_ = Input_I()
     screen = mss.mss()
-    pixel_increment = 6 #controls how many pixels the mouse moves for each relative movement
+    pixel_increment = get_pixel_increse #controls how many pixels the mouse moves for each relative movement
     with open("lib/config/config.json") as f:
         sens_config = json.load(f)
     aimbot_status = colored("Enabled", 'green')

@@ -22,6 +22,7 @@ def create_config():
     config.set("settings", "confidence_threshold", "1")
     config.set("settings", "NMS_IoU", "1")
     config.set("settings", "mouse_delay", "0.0001")
+    config.set("settings", "pixel_increse", "5")
     with open("configuration_settings.ini", 'w') as configfile:
         config.write(configfile)
 
@@ -46,6 +47,9 @@ NMS_IoU_str = str(NMS_IoU)
 
 get_mouse_delay = config.getfloat('settings', 'mouse_delay')
 get_mouse_delay_str = str(get_mouse_delay)
+
+get_pixel_increse = config.getfloat('settings', 'pixel_increse')
+get_pixel_increse_str = str(get_pixel_increse)
 
 def on_release(key):
     try:
@@ -104,6 +108,7 @@ if __name__ == "__main__":
     print("    Confidence Threshold; " + confidence_threshold_str)
     print("    NMS IoU; " + NMS_IoU_str)
     print("    Mouse Delay; " + get_mouse_delay_str + "ms")
+    print("    Pixel Increse; " + get_pixel_increse_str + "px")
     print("")
     
 
