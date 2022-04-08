@@ -39,6 +39,7 @@ This script uses A LOT of RAM/CPU/GPU Power, You must have at least 3 GB of DDR3
 > * welcome_notif = 0/1 | Display welcome notification at startup
 > * size_of_window = 0/1000
 > * confidence_threshold = 0.10/0.99  |  Confidence Threshold  |  0.01 = No Detection Strictness (Can Detect Non-Players)  |  0.99 = Strict Detection (Must Affirm its a enemy)
+> > Best Confidence Threshold / DECENT > 0.12 / BEST > 0.21 / ALSO BEST > 0.34 / 0.45 / 0.55
 > * nms_iou = 0.10/0.99  |  Keep same as confidence_threshold ALWAYS
 > * mouse_delay = 0.0001/0.9999  |  The delay at wich your mouse moves
 > * pixel_increse = 1/20  |  The speed at which your crosshair/mouse moves at (Sensitivity)
