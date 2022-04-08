@@ -33,6 +33,16 @@ This script uses A LOT of RAM/CPU/GPU Power, You must have at least 3 GB of DDR3
 > * Player ESP
 > * Customizable Dataset
 
+# Configuration
+> you can edit the config using the "configuration_settings.ini" file
+> * 0 = Off   |    1 = On
+> * welcome_notif = 0/1 | Display welcome notification at startup
+> * size_of_window = 0/1000
+> * confidence_threshold = 0.10/0.99  |  Confidence Threshold  |  0.01 = No Detection Strictness (Can Detect Non-Players)  |  0.99 = Strict Detection (Must Affirm its a enemy)
+> * nms_iou = 0.10/0.99  |  Keep same as confidence_threshold ALWAYS
+> * mouse_delay = 0.0001/0.9999  |  The delay at wich your mouse moves
+> * pixel_increse = 1/20  |  The speed at which your crosshair/mouse moves at (Sensitivity)
+
 # Public Source
 Our code is public source and free to use/edit (But do not sell, We have a liense) You may edit our code (Under A Fork of the project, By obligaitons of our license you may not distribute non-approved / tampered code unless it has been approved as a FORK of our project)
 ![alt text](https://github.com/Zurek0x/NuremX/blob/main/media/Screenshot_5.png)
@@ -53,6 +63,9 @@ Leatest Version of PIP
 ```
 
 # Change-Log
+> Version 1.7
+> * Fixed Update_Check Function (Wasn't Checking Properly)
+>
 > Version 1.5.9
 > * Added Update_Check Function to check for updates (Does Not Auto Update)
 > 
