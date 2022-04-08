@@ -17,7 +17,7 @@ from termcolor import colored
 toaster = ToastNotifier()
 config = configparser.ConfigParser()
 
-current_ver = str('1.6.2')
+current_ver = str('1.6.4')
 leatest_version_check = str('[NM-NotSet] NOT_SET-NO_CHECK-AUTH?>/?')
 
 def update_check():
@@ -116,8 +116,8 @@ def setup():
 
 if __name__ == "__main__":
     title_gen = string.ascii_letters
-    title_str = ''.join(random.choice(title_gen) for i in range(10))
-    ctypes.windll.kernel32.SetConsoleTitleA(title_str)
+    title_str = ''.join(random.choice(title_gen) for i in range(30))
+    ctypes.windll.kernel32.SetConsoleTitleW(title_str)
     os.system('cls' if os.name == 'nt' else 'clear')
     os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = '1'
     update_check()

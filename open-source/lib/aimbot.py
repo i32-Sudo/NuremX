@@ -16,7 +16,7 @@ import configparser
 from termcolor import colored
 
 title_gen = string.ascii_letters
-title_str = ''.join(random.choice(title_gen) for i in range(10))
+title_str = ''.join(random.choice(title_gen) for i in range(30))
 
 config = configparser.ConfigParser()
 config.read('configuration_settings.ini')
