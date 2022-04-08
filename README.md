@@ -79,6 +79,10 @@ How To Add Python to PATH > https://youtu.be/Y2q_b4ugPWk
 ```
 
 # Change-Log
+> Version 1.9
+> * Added RICH_PRESENCE Sponsorship
+> * Fixed requirements.txt broken modules
+>
 > Version 1.8
 > * Changed version listing from Float to Int.
 > * Added status_overlay function to script

@@ -26,5 +26,6 @@ Pillow
 win10toast
 configparser
 urllib3
-tkinter
-threading
+tk
+thread6
+pypresence

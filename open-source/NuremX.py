@@ -1,26 +1,33 @@
-import json
-import os
-import os.path
-import sys
-import threading
-import random
-import string
-import ctypes
-import configparser
-import urllib
-import urllib.request
-import threading
-
-from threading import Thread
-from tkinter import *
-from win10toast import ToastNotifier
-from pynput import keyboard
-from termcolor import colored
+try:
+    import json
+    import os
+    import os.path
+    import sys
+    import threading
+    import random
+    import string
+    import ctypes
+    import configparser
+    import urllib
+    import urllib.request
+    import threading
+    from pypresence import Presence
+    from threading import Thread
+    from tkinter import *
+    from win10toast import ToastNotifier
+    from pynput import keyboard
+    from termcolor import colored
+except:
+    while True:
+        print("[!] Missing/Not-Found Module!")
+        print("[+] Please re-run (setup.bat) or install the requirements.txt using PIP!")
+        print("[?] This is a error with PYTHON/PIP, Not NuremX")
+        input()
 
 toaster = ToastNotifier()
 config = configparser.ConfigParser()
 
-current_ver = str('v1.8')
+current_ver = str('v1.9')
 leatest_version_check = str('[NM-NotSet] NOT_SET-NO_CHECK-AUTH?>/?')
 
 def update_check():
@@ -50,6 +57,7 @@ def create_config():
     config.set("settings", "mouse_delay", "0.0001")
     config.set("settings", "pixel_increse", "5")
     config.set("settings", "status_overlay", "1")
+    config.set("settings", "promote", "1")
     with open("configuration_settings.ini", 'w') as configfile:
         config.write(configfile)
 
@@ -80,6 +88,9 @@ get_pixel_increse_str = str(get_pixel_increse)
 
 get_status_overlay = config.get('settings', 'status_overlay')
 status_overlay = int(get_status_overlay)
+
+get_promote = config.get('settings', 'promote')
+promote = int(get_promote)
 
 def on_release(key):
     try:
@@ -137,10 +148,25 @@ def overlay():
     root.after(1000, overlay_start)
     root.mainloop()
 
+def rpc():
+    rpc = Presence("960808337514053692")
+    rpc.connect()
+    print(rpc.update(state="PC Aim-Assist for Apex!", details="NuremX - Apex Legends", large_image = "large_image", large_text="img0", buttons = [{"label": "NuremX", "url": "https://github.com/Zurek0x/NuremX"}]))
+    #rpc.update(
+    #        large_image = "large_image",
+    #        large_text = "img0",
+    #        state = "T",
+    #        buttons = [{"label": "NuremX", "url": "https://github.com/Zurek0x/NuremX"}]
+    #)
+
 if __name__ == "__main__":
     title_gen = string.ascii_letters
     title_str = ''.join(random.choice(title_gen) for i in range(30))
     ctypes.windll.kernel32.SetConsoleTitleW(title_str)
+    if promote == 1:
+        rpc()
+    else:
+        pass
     os.system('cls' if os.name == 'nt' else 'clear')
     os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = '1'
     update_check()
