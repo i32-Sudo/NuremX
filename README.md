@@ -30,6 +30,7 @@ This script uses A LOT of RAM/CPU/GPU Power, You must have at least 3 GB of DDR3
 > 
 > Cheat Features
 > * Aim-Assist (Customizable With Configuration)
+> * Overlay Status and FOV
 > * Player ESP
 > * Customizable Dataset
 
@@ -44,6 +45,7 @@ This script uses A LOT of RAM/CPU/GPU Power, You must have at least 3 GB of DDR3
 > * mouse_delay = 0.0001/0.9999  |  The delay at wich your mouse moves
 > * pixel_increse = 1/20  |  The speed at which your crosshair/mouse moves at (Sensitivity)
 > > Best Pixel Increse / OK > 3 / GOOD > 6 / BEST > 8 / ALSO BEST > 10-12 / 14 / 16
+> * status_overlay = 0/1  |  1 = On  /  0 = Off
 
 # Public Source
 Our code is public source and free to use/edit (But do not sell, We have a liense) You may edit our code (Under A Fork of the project, By obligaitons of our license you may not distribute non-approved / tampered code unless it has been approved as a FORK of our project)
@@ -66,7 +68,8 @@ After installing python and making sure to follow images as they say do the foll
 4. run the command " pip ", If a bunch of commands and help info comes up then continue!
 (If it doesn't then check the video "How To Install PIP for python" Also make sure you intsalled python)
 5. next run the "setup.bat" file in "open-source" folder.
-6. after the setup has completed then run the " Spoofer.bat " file
+6. after the setup has completed then run the " Spoofer.exe " file > If on windows
+(Linux users can just install the requirements.txt and then run NuremX.py using Python Command)
 7. wait for the script to startup and done! 
 
 
@@ -76,6 +79,11 @@ How To Add Python to PATH > https://youtu.be/Y2q_b4ugPWk
 ```
 
 # Change-Log
+> Version 1.8
+> * Changed version listing from Float to Int.
+> * Added status_overlay function to script
+> * Added status (enabled / disabled) overlay on top left of screen
+>
 > Version 1.7
 > * Fixed Update_Check Function (Wasn't Checking Properly)
 >

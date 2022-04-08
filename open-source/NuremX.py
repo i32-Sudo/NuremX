@@ -9,7 +9,10 @@ import ctypes
 import configparser
 import urllib
 import urllib.request
+import threading
 
+from threading import Thread
+from tkinter import *
 from win10toast import ToastNotifier
 from pynput import keyboard
 from termcolor import colored
@@ -17,7 +20,7 @@ from termcolor import colored
 toaster = ToastNotifier()
 config = configparser.ConfigParser()
 
-current_ver = str('v1.7')
+current_ver = str('v1.8')
 leatest_version_check = str('[NM-NotSet] NOT_SET-NO_CHECK-AUTH?>/?')
 
 def update_check():
@@ -46,6 +49,7 @@ def create_config():
     config.set("settings", "NMS_IoU", "1")
     config.set("settings", "mouse_delay", "0.0001")
     config.set("settings", "pixel_increse", "5")
+    config.set("settings", "status_overlay", "1")
     with open("configuration_settings.ini", 'w') as configfile:
         config.write(configfile)
 
@@ -73,6 +77,9 @@ get_mouse_delay_str = str(get_mouse_delay)
 
 get_pixel_increse = config.getfloat('settings', 'pixel_increse')
 get_pixel_increse_str = str(get_pixel_increse)
+
+get_status_overlay = config.get('settings', 'status_overlay')
+status_overlay = int(get_status_overlay)
 
 def on_release(key):
     try:
@@ -114,6 +121,22 @@ def setup():
         json.dump(sensitivity_settings, outfile)
     print("[INFO] Sensitivity configuration complete")
 
+def overlay():
+    def overlay_start():
+        global root
+        root = Tk()
+        root.geometry("100x100")
+        root.overrideredirect(True)
+        root.attributes('-topmost', True)
+        if Aimbot.aimbot_status == colored("Enabled", 'green'):
+            root.configure(bg='green')
+        else:
+            root.configure(bg='red')
+        root.after(2000, overlay_start)
+    overlay_start()
+    root.after(1000, overlay_start)
+    root.mainloop()
+
 if __name__ == "__main__":
     title_gen = string.ascii_letters
     title_str = ''.join(random.choice(title_gen) for i in range(30))
@@ -148,4 +171,8 @@ if __name__ == "__main__":
         pass
     listener = keyboard.Listener(on_release=on_release)
     listener.start()
+    if status_overlay == 1:
+        Thread(target = overlay).start()
+    else:
+        pass
     main()

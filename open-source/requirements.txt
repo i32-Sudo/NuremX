@@ -26,3 +26,5 @@ Pillow
 win10toast
 configparser
 urllib3
+tkinter
+threading
