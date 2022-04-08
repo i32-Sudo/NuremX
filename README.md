@@ -46,6 +46,8 @@ This script uses A LOT of RAM/CPU/GPU Power, You must have at least 3 GB of DDR3
 > * pixel_increse = 1/20  |  The speed at which your crosshair/mouse moves at (Sensitivity)
 > > Best Pixel Increse / OK > 3 / GOOD > 6 / BEST > 8 / ALSO BEST > 10-12 / 14 / 16
 > * status_overlay = 0/1  |  1 = On  /  0 = Off
+> * promote = 0/1
+> > Either turn on or off discord rich presence to support the project!
 
 # Public Source
 Our code is public source and free to use/edit (But do not sell, We have a liense) You may edit our code (Under A Fork of the project, By obligaitons of our license you may not distribute non-approved / tampered code unless it has been approved as a FORK of our project)
