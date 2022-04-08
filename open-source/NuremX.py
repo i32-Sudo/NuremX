@@ -17,7 +17,7 @@ from termcolor import colored
 toaster = ToastNotifier()
 config = configparser.ConfigParser()
 
-current_ver = str('1.6.4')
+current_ver = str('v1.7')
 leatest_version_check = str('[NM-NotSet] NOT_SET-NO_CHECK-AUTH?>/?')
 
 def update_check():
@@ -27,7 +27,7 @@ def update_check():
     file = urllib.request.urlopen(url_server)
     for line in file:
         decoded_line = line.decode("utf-8")
-        if decoded_line != current_ver:
+        if decoded_line == current_ver:
             leatest_version_check = str('[Leatest]')
         else:
             print("[!] New Version Released!")
