@@ -83,9 +83,9 @@ status_overlay = int(get_status_overlay)
 
 def on_release(key):
     try:
-        if key == keyboard.Key.f7:
+        if key == keyboard.Key.f2:
             Aimbot.update_status_aimbot()
-        if key == keyboard.Key.f8:
+        if key == keyboard.Key.f4:
             Aimbot.clean_up()
     except NameError:
         pass

@@ -90,7 +90,7 @@ class Aimbot:
         self.mouse_delay = mouse_delay
         self.debug = debug
 
-        print("[F7] Toggle Aim Assist\n[F8] Force Close Script")
+        print("[F2] Toggle Aim Assist\n[F4] Force Close Script")
 
     def update_status_aimbot():
         if Aimbot.aimbot_status == colored("Enabled", 'green'):
