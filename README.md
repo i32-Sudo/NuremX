@@ -49,19 +49,30 @@ This script uses A LOT of RAM/CPU/GPU Power, You must have at least 3 GB of DDR3
 Our code is public source and free to use/edit (But do not sell, We have a liense) You may edit our code (Under A Fork of the project, By obligaitons of our license you may not distribute non-approved / tampered code unless it has been approved as a FORK of our project)
 ![alt text](https://github.com/Zurek0x/NuremX/blob/main/media/Screenshot_5.png)
 
-# Usage
+# How to install and use
 ```
-[Requirements]
-Nvidia SDK
-Torch SDK for Cuda 10+
-Python 3.8+
-Leatest Version of PIP
+Required Pieces Of Software:
+[Python 3.9 Or Later] > https://www.python.org/downloads/
+(make sure to add your version of python to PATH) > https://miro.medium.com/max/1344/0*7nOyowsPsGI19pZT.png
+(it should ask you in the installer.)
+Once done do the following.
 
-1. install required modules
-(pip install -r requirements.txt)
-2. Run script using command
-(python3 NuremX.py) or (python NuremX.py)
-3. Dun
+[installing and running]
+After installing python and making sure to follow images as they say do the following.
+1. Open CMD as administrator
+2. run the command " python ", If the command works a python IDE should open if so then continue!
+(If it doesn't then check the video "How To Add Python To PATH" Also make sure you installed Python first)
+3. Close and re-open CMD as administrator
+4. run the command " pip ", If a bunch of commands and help info comes up then continue!
+(If it doesn't then check the video "How To Install PIP for python" Also make sure you intsalled python)
+5. next run the "setup.bat" file in "open-source" folder.
+6. after the setup has completed then run the " Spoofer.bat " file
+7. wait for the script to startup and done! 
+
+
+Help Videos.
+How To Install PIP for Python > https://youtu.be/Ko9b_vC6XY0
+How To Add Python to PATH > https://youtu.be/Y2q_b4ugPWk
 ```
 
 # Change-Log
