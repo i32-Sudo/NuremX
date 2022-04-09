@@ -75,7 +75,7 @@ After installing python and making sure to follow images as they say do the foll
 4. run the command " pip ", If a bunch of commands and help info comes up then continue!
 (If it doesn't then check the video "How To Install PIP for python" Also make sure you intsalled python)
 5. next run the "setup.bat" file in "open-source" folder.
-6. after the setup has completed then run the " Spoofer.exe " file > If on windows
+6. after the setup has completed then run the " run.bat " file / If on windows
 (Linux users can just install the requirements.txt and then run NuremX.py using Python Command)
 7. wait for the script to startup and done! 
 
