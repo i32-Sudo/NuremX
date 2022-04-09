@@ -27,7 +27,7 @@ except:
 toaster = ToastNotifier()
 config = configparser.ConfigParser()
 
-current_ver = str('v1.9')
+current_ver = str('v2.0')
 leatest_version_check = str('[NM-NotSet] NOT_SET-NO_CHECK-AUTH?>/?')
 
 def update_check():
@@ -58,6 +58,8 @@ def create_config():
     config.set("settings", "pixel_increse", "5")
     config.set("settings", "status_overlay", "1")
     config.set("settings", "promote", "1")
+    config.set("settings", "overlay_resolution_X", "30")
+    config.set("settings", "overlay_resolution_Y", "30")
     with open("configuration_settings.ini", 'w') as configfile:
         config.write(configfile)
 
@@ -91,6 +93,11 @@ status_overlay = int(get_status_overlay)
 
 get_promote = config.get('settings', 'promote')
 promote = int(get_promote)
+
+overlay_resolution_X = config.getint('settings', 'overlay_resolution_X')
+overlay_resolution_Y = config.getint('settings', 'overlay_resolution_Y')
+overlay_resolution_DR = str('x')
+overlay_resolution=str(overlay_resolution_X)+str(overlay_resolution_DR)+str(overlay_resolution_Y)
 
 def on_release(key):
     try:
@@ -136,7 +143,7 @@ def overlay():
     def overlay_start():
         global root
         root = Tk()
-        root.geometry("100x100")
+        root.geometry(overlay_resolution)
         root.overrideredirect(True)
         root.attributes('-topmost', True)
         if Aimbot.aimbot_status == colored("Enabled", 'green'):
