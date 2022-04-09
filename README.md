@@ -15,6 +15,9 @@ The program will auto check for updates from the github repo' using URLLIB3, Upo
 NuremX Uses YOLOv5 AI Training and AI Datasets, We have trained a professional AI to recognize enimies and entities and soon items and or objects, This is a advanced cheat, There is no Memory Hooking or Hex Editing or even Process Hooking, Everything comes straight from your display and it will recognize the enimies and automatically aim at them and display there position. We hope to build onto this a lot more and find that Process Hooking and Memory Hooking/Editing is a long process especially when you have a Anti-Cheat in the way of your path to making a sucsessful cheat program or script.
 We don't want people to take this as it "is" a cheat or Aim-Assist but something you can learn off of, We think that AI Training and Nurel Networks are great and a good way to train AI to do human tasks, We are starting to see in 2022+ that AI is becoming more powerful and as computers become more powerful we can output almost the same power as a human brain.
 
+# Note About Clones & Rats
+Un-official sources of our project may show up in a form of a Fork or post from a random person or friend, Never trust it. Always download the code and program from our github page ( https://github.com/Zurek0x/NuremX ) And don't run/download any code that doesn't come from this main repository. If you come accross a Copy of our project with malicious code or just a straight Clone/Fork of our project DO NOT TRUST IT, If we see a fork of our project we will implement the update into our current script as a UPDATE.
+
 # Notice About Performance
 This script uses A LOT of RAM/CPU/GPU Power, You must have at least 3 GB of DDR3 Ram dedicated to the script, Note that also anything lower peformance then a GTX 1080 TI will have delayed peformance and have a lower Frame Count You also want at least a 3Ghz (or more) CPU with more then 3 Cores Minimum. 
 
@@ -48,6 +51,8 @@ This script uses A LOT of RAM/CPU/GPU Power, You must have at least 3 GB of DDR3
 > * status_overlay = 0/1  |  1 = On  /  0 = Off
 > * overlay_resolution_X = 1/4000  |  Set overlay resolution by the X-Axis
 > * overlay_resolution_Y = 1/4000  |  Set overlay resolution by the Y-Axis
+> * promote = 0/1
+> > Either turn on or off discord rich presence to support the project!
 
 # Public Source
 Our code is public source and free to use/edit (But do not sell, We have a liense) You may edit our code (Under A Fork of the project, By obligaitons of our license you may not distribute non-approved / tampered code unless it has been approved as a FORK of our project)
