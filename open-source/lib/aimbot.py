@@ -91,6 +91,7 @@ class Aimbot:
         self.debug = debug
 
         print("[F2] Toggle Aim Assist\n[F4] Force Close Script")
+        print("[X]  Aimbot Trigger Key")
 
     def update_status_aimbot():
         if Aimbot.aimbot_status == colored("Enabled", 'green'):
@@ -116,7 +117,7 @@ class Aimbot:
         return True if Aimbot.aimbot_status == colored("Enabled", 'green') else False
 
     def is_targeted():
-        return True if win32api.GetKeyState(0x02) in (-127, -128) else False
+        return True if win32api.GetKeyState(0x58) in (-127, -128) else False
 
     def is_target_locked(x, y):
         #plus/minus 5 pixel threshold

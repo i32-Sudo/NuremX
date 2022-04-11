@@ -86,6 +86,9 @@ How To Add Python to PATH > https://youtu.be/Y2q_b4ugPWk
 ```
 
 # Change-Log
+> Version 2.1
+> * Changed aimbot trigger key to 'X' (0x58) on winuser.h module
+>
 > Version 2.0
 > * Added overlay_resolution function to overlay
 > * Added overlay_resolution_x to configuration file
