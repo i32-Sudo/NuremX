@@ -23,14 +23,19 @@ This script uses A LOT of RAM/CPU/GPU Power, You must have at least 3 GB of DDR3
 
 # Cheat Features
 > Script Features
-> * UUID Spoofing (Spoofs Title Window & Command Window)
 > * Lots of customization options
 > * Better support for Aim Assist
-> * Arduino Compatible (Coming Soon, Requires Capture Card)
 > * GPU/Cuda Utilization
 > * Ryzen/AMD/Intel CPU Support
 > * Windows 10/11 & Debian Linux Support
-> 
+>
+> Bypassing Features
+> > These bypassing features doesn't actually bypass the anti-cheat but spoofs it so it doesn't get saved by the anti-cheat and later get auto flagged when detected as a running process or window or file.
+> * UUID Spoofing (Spoofs Title Window & Command Window)
+> * Arduino Compatible (Coming Soon, Requires Capture Card)
+> * Windows.NT Hooking (Hiding script behind {windows command processor} and {explorer.exe} )
+> * Icon spoofing (Spoofing icon of program)
+>
 > Cheat Features
 > * Aim-Assist (Customizable With Configuration)
 > * Overlay Status and FOV
