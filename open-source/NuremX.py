@@ -221,7 +221,7 @@ if __name__ == "__main__":
         pass
     os.system('cls' if os.name == 'nt' else 'clear')
     os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = '1'
-    #update_check()
+    update_check()
     print(colored('''
     NuremX - Apex Legends
     + High Peformance
