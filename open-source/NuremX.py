@@ -29,7 +29,7 @@ except:
 toaster = ToastNotifier()
 config = configparser.ConfigParser()
 win32api = 1
-current_ver = str('v2.4')
+current_ver = str('v2.5')
 leatest_version_check = str('[NM-NotSet] NOT_SET-NO_CHECK-AUTH?>/?')
 
 def update_check():
