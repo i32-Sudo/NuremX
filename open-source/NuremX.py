@@ -32,6 +32,9 @@ win32api = 1
 current_ver = str('v2.6')
 leatest_version_check = str('[NM-NotSet] NOT_SET-NO_CHECK-AUTH?>/?')
 
+def clear():
+    os.system('cls')
+
 def update_check():
     global decoded_line
     global current_ver
@@ -47,9 +50,17 @@ def update_check():
             print("[$] " + current_ver + " >> " + decoded_line)
             print("[ Download Page ]")
             print("[  > https://github.com/Zurek0x/NuremX < ]")
-            while True:
-                input()
-
+            print("Would you like to bypass this? [Y/N]")
+            update_check_y_n = input("[>] ")
+            if update_check_y_n == 'y':
+                clear()
+            elif update_check_y_n == 'n':
+                exit()
+            elif update_check_y_n == 'Y':
+                clear()
+            elif update_check_y_n == 'N':
+                exit()
+                
 def create_config():
     config.add_section("settings")
     config.set("settings", "welcome_notif", "1")
@@ -179,6 +190,7 @@ if __name__ == "__main__":
     os.system('cls' if os.name == 'nt' else 'clear')
     os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = '1'
     update_check()
+    clear()
     print(colored('''
     NuremX - Apex Legends
     + High Peformance
