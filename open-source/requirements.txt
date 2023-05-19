@@ -15,6 +15,7 @@ seaborn>=0.11.0
 pandas
 
 pyarmor
+re
 regex
 mss
 pygame
